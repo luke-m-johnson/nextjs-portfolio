@@ -1,9 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { MotionProps } from 'framer-motion';
 import type { ComponentPropsWithoutRef } from 'react';
 
-// Extend props from a regular <h1> plus motion
-export const MotionH1 = (props: ComponentPropsWithoutRef<'h1'>) => {
+type MotionH1Props = ComponentPropsWithoutRef<'h1'> & MotionProps;
+
+export const MotionH1 = (props: MotionH1Props) => {
   return <motion.h1 {...props} />;
 };
